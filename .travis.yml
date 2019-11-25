@@ -6,5 +6,5 @@ before_install:
   - docker build -t essamamdani/react-app-docker -f ./Dockerfile.dev .
 
 script:
-  - docker run essamamdani/react-app-docker npm run test -- --coverage
+  - docker run -e CI=true essamamdani/react-app-docker npm run test -- --coverage
 
