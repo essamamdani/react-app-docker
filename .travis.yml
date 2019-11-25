@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t essamamdani/react-app-docker -f ./Dockerfile.dev
+  - docker build -t essamamdani/react-app-docker -f ./Dockerfile.dev .
 
 script:
   - docker run essamamdani/react-app-docker npm run test -- --coverage
